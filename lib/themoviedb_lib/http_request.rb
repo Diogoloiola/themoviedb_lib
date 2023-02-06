@@ -1,5 +1,7 @@
 require 'uri'
 require 'typhoeus'
+require 'json'
+
 module ThemoviedbLib
   class HttpRequest # rubocop:disable Style/Documentation
     def initialize(base_url, token, endpoint)
@@ -25,6 +27,7 @@ module ThemoviedbLib
         headers: { 'Content-Type': 'application/json' },
         verbose: verbose
       ).run
+      JSON.parse(@response.body)
     end
 
     private
