@@ -17,3 +17,7 @@ gem 'rspec', '~> 3.0'
 gem 'rubocop', '~> 1.21'
 
 gem 'typhoeus', '~> 1.4'
+
+gem 'vcr', '~> 6.1'
+
+gem 'webmock', '~> 3.18', '>= 3.18.1'
