@@ -2,9 +2,10 @@
 
 require_relative 'themoviedb_lib/version'
 require_relative 'themoviedb_lib/api/movie'
-require_relative 'themoviedb_lib/api/nextwork'
+require_relative 'themoviedb_lib/api/network'
 require_relative 'themoviedb_lib/api/trending'
 require_relative 'themoviedb_lib/api/review'
+require_relative 'themoviedb_lib/api/search'
 require_relative 'themoviedb_lib/models/credentials'
 module ThemoviedbLib
   class ThemoviedbClient
@@ -30,6 +31,10 @@ module ThemoviedbLib
 
     def reviews
       @reviews ||= ThemoviedbLib::Api::Review.new(@configs)
+    end
+
+    def searches
+      @searches ||= ThemoviedbLib::Api::Search.new(@configs)
     end
   end
 end
