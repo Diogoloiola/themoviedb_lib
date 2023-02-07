@@ -4,6 +4,7 @@ require_relative 'themoviedb_lib/version'
 require_relative 'themoviedb_lib/api/movie'
 require_relative 'themoviedb_lib/api/nextwork'
 require_relative 'themoviedb_lib/api/trending'
+require_relative 'themoviedb_lib/api/review'
 require_relative 'themoviedb_lib/models/credentials'
 module ThemoviedbLib
   class ThemoviedbClient
@@ -25,6 +26,10 @@ module ThemoviedbLib
 
     def persons
       @persons ||= ThemoviedbLib::Api::Person.new(@configs)
+    end
+
+    def reviews
+      @reviews ||= ThemoviedbLib::Api::Review.new(@configs)
     end
   end
 end
