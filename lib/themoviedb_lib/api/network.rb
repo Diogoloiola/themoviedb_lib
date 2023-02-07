@@ -16,11 +16,11 @@ module ThemoviedbLib
       end
 
       def alternative_names(id)
-        request(:get, "/#{id}/alternative_names")
+        request(:get, "#{id}/alternative_names")
       end
 
       def images(id)
-        request(:get, "/#{id}/images")
+        request(:get, "#{id}/images")
       end
     end
   end

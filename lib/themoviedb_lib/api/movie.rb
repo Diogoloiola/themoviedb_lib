@@ -76,19 +76,19 @@ module ThemoviedbLib
       end
 
       def now_playing(params: {})
-        request(:get, '/now_playing', params: params)
+        request(:get, 'now_playing', params: params)
       end
 
       def latest(params: {})
-        request(:get, '/latest', params: params)
+        request(:get, 'latest', params: params)
       end
 
       def top_rated(params: {})
-        request(:get, '/top_rated', params: params)
+        request(:get, 'top_rated', params: params)
       end
 
       def upcoming(params: {})
-        request(:get, '/upcoming', params: params)
+        request(:get, 'upcoming', params: params)
       end
     end
   end

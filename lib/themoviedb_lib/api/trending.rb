@@ -2,7 +2,7 @@ require_relative '../http_request'
 
 module ThemoviedbLib
   module Api
-    class Treding < HttpRequest
+    class Trending < HttpRequest
       def initialize(configs)
         super(configs.base_url, configs.token, '/trending')
       end
