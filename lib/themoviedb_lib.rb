@@ -12,5 +12,13 @@ module ThemoviedbLib
     def movies
       @movies ||= ThemoviedbLib::Api::Movie.new(@configs)
     end
+
+    def networks
+      @networks ||= ThemoviedbLib::Api::Network.new(@configs)
+    end
+
+    def trending
+      @trending ||= ThemoviedbLib::Api::Treding.new(@configs)
+    end
   end
 end
