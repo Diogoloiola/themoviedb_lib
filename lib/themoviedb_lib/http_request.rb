@@ -10,8 +10,8 @@ module ThemoviedbLib
       @endpoint = endpoint
     end
 
-    def get(id)
-      request(:get, id)
+    def get(id, params: {})
+      request(:get, id, params: params)
     end
 
     def request(method, uid = nil, params: {}, body: {}, verbose: false) # rubocop:disable Metrics/MethodLength

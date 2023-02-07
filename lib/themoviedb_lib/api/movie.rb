@@ -7,36 +7,36 @@ module ThemoviedbLib
         super(configs.base_url, configs.token, '/movie')
       end
 
-      def credits(id)
-        request(:get, "#{id}/credits")
+      def credits(id, params: {})
+        request(:get, "#{id}/credits", params: params)
       end
 
-      def account_states(id)
-        request(:get, "#{id}/account_states")
+      def account_states(id, params: {})
+        request(:get, "#{id}/account_states", params: params)
       end
 
-      def alternative_titles(id)
-        request(:get, "#{id}/alternative_titles")
+      def alternative_titles(id, params: {})
+        request(:get, "#{id}/alternative_titles", params: params)
       end
 
-      def changes(id)
-        request(:get, "#{id}/changes")
+      def changes(id, params)
+        request(:get, "#{id}/changes", params: params)
       end
 
       def external_ids(id)
         request(:get, "#{id}/external_ids")
       end
 
-      def images(id)
-        request(:get, "#{id}/images")
+      def images(id, params: {})
+        request(:get, "#{id}/images", params: params)
       end
 
       def keywords(id)
         request(:get, "#{id}/keywords")
       end
 
-      def lists(id)
-        request(:get, "#{id}/lists")
+      def lists(id, params: {})
+        request(:get, "#{id}/lists", params: params)
       end
 
       def recommendations(id)
@@ -47,20 +47,20 @@ module ThemoviedbLib
         request(:get, "#{id}/release_dates")
       end
 
-      def reviews(id)
-        request(:get, "#{id}/reviews")
+      def reviews(id, params: {})
+        request(:get, "#{id}/reviews", params: params)
       end
 
-      def similar(id)
-        request(:get, "#{id}/similar")
+      def similar(id, params: {})
+        request(:get, "#{id}/similar", params: params)
       end
 
       def translations(id)
         request(:get, "#{id}/translations")
       end
 
-      def videos(id)
-        request(:get, "#{id}/videos")
+      def videos(id, params: {})
+        request(:get, "#{id}/videos", params: params)
       end
 
       def watch_providers(id)
@@ -75,20 +75,20 @@ module ThemoviedbLib
         request(:delete, "#{id}/rating")
       end
 
-      def latest
-        request(:get, '/latest')
+      def now_playing(params: {})
+        request(:get, '/now_playing', params: params)
       end
 
-      def now_playing
-        request(:get, '/now_playing')
+      def latest(params: {})
+        request(:get, '/latest', params: params)
       end
 
-      def top_rated
-        request(:get, '/top_rated')
+      def top_rated(params: {})
+        request(:get, '/top_rated', params: params)
       end
 
-      def upcoming
-        request(:get, '/upcoming')
+      def upcoming(params: {})
+        request(:get, '/upcoming', params: params)
       end
     end
   end
