@@ -18,6 +18,18 @@ module ThemoviedbLib
       def alternative_titles(id, params: {})
         request(:get, "#{id}/alternative_titles", params: params)
       end
+
+      def changes(id, params: {})
+        request(:get, "#{id}/changes", params: params)
+      end
+
+      def content_ratings(id)
+        request(:get, "#{id}/content_ratings")
+      end
+
+      def credits(id)
+        request(:get, "#{id}/credits")
+      end
     end
   end
 end
