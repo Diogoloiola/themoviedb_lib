@@ -30,6 +30,18 @@ module ThemoviedbLib
       def credits(id)
         request(:get, "#{id}/credits")
       end
+
+      def episode_groups(id, params: {})
+        request(:get, "#{id}/episode_groups", params: params)
+      end
+
+      def external_ids(id, params: {})
+        request(:get, "#{id}/external_ids", params: params)
+      end
+
+      def images(id, params: {})
+        request(:get, "#{id}/images", params: params)
+      end
     end
   end
 end
