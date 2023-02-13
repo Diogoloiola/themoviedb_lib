@@ -42,6 +42,18 @@ module ThemoviedbLib
       def images(id, params: {})
         request(:get, "#{id}/images", params: params)
       end
+
+      def keywords(id)
+        request(:get, "#{id}/keywords")
+      end
+
+      def recommendations(id, params: {})
+        request(:get, "#{id}/recommendations", params: params)
+      end
+
+      def reviews(id, params: {})
+        request(:get, "#{id}/reviews", params: params)
+      end
     end
   end
 end

@@ -1,7 +1,7 @@
 require 'uri'
 require 'typhoeus'
 require 'json'
-
+require 'byebug'
 module ThemoviedbLib
   class HttpRequest # rubocop:disable Style/Documentation
     def initialize(base_url, token, endpoint)
